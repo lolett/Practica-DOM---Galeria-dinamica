@@ -1,6 +1,6 @@
 Práctica DOM - Galeria dinámica
 ¿Recuerdas el proyecto anterior dónde has creado una Landing Page para una “supuesta” tienda? Pues ha llegado el momento de mejorar este proyecto utilizando JavaScript en el DOM 🤘
-Busca un web de productos donde inspirarte, al igual que en proyecto anterior, la web PcComponentes es un buen lugar para ello. Toma como referencia el listado de productos:
+Busca una web de productos donde inspirarte, al igual que en proyecto anterior, la web PcComponentes es un buen lugar para ello. Toma como referencia el listado de productos:
 
 En este caso, para arrancar el proyecto puedes seguir los siguientes pasos:
 
