@@ -1,5 +1,93 @@
 const header = document.createElement('header')
-const headerUl = document.createElement('ul')
+const headerUlLeft = document.createElement('ul')
+const headerUlRight = document.createElement('ul')
+headerUlLeft.classList.add('header-list-left')
+headerUlRight.classList.add('header-list-right')
+
+const headerElements = ['Home', 'Search', 'Language', 'Mi Account', 'Char']
+const headerDivLeft = document.createElement('div')
+headerDivLeft.classList.add('header-div-left')
+const headerDivRight = document.createElement('div')
+headerDivRight.classList.add('header-div-right')
+
+const searchContainer = document.createElement('div')
+searchContainer.classList.add('search-container')
+
+const searchForm = document.createElement('form')
+searchForm.classList.add('search-form')
+
+const searchInput = document.createElement('input')
+searchInput.classList.add('search-input')
+searchInput.setAttribute('type', 'text')
+searchInput.setAttribute('placeholder', 'Search...')
+
+const searchButton = document.createElement('button')
+searchButton.classList.add('search-button')
+
+const searchButtonImage = document.createElement('img')
+searchButtonImage.setAttribute(
+  'src',
+  'https://img.icons8.com/ios-filled/50/000000/search.png'
+)
+searchButtonImage.setAttribute('alt', 'Search')
+
+searchButton.appendChild(searchButtonImage)
+searchForm.appendChild(searchInput)
+searchForm.appendChild(searchButton)
+searchContainer.appendChild(searchForm)
+
+for (let i = 0; i < headerElements.length; i++) {
+  const element = headerElements[i]
+  let li = document.createElement('li')
+  li.textContent = element
+  if (element === 'Home') {
+    headerUlLeft.appendChild(li)
+  } else if (element === 'Search') {
+    headerUlLeft.appendChild(searchContainer)
+  } else {
+    headerUlRight.appendChild(li)
+  }
+}
+
+headerDivLeft.appendChild(headerUlLeft)
+headerDivRight.appendChild(headerUlRight)
+header.appendChild(headerDivLeft)
+header.appendChild(headerDivRight)
+
+document.body.appendChild(header)
+
+const main = document.createElement('main')
+
+const sectionFilter = document.createElement('section')
+const sectionProducts = document.createElement('section')
+
+const ulFilter = document.createElement('ul')
+const ulProducts = document.createElement('ul')
+
+const titleFilter = document.createElement('h2')
+titleFilter.textContent = 'Product Categories'
+
+const titleProdcuts = document.createElement('h1')
+titleProdcuts.textContent = 'New Arrivals'
+
+const categories = [
+  'Computers',
+  'Electronics',
+  'Clothing and Footwear',
+  'Movies and TV Shows',
+  'Video Games',
+  'Manga and Comics',
+  'Phones and Accessories',
+  'Smartwatches',
+  'Toys',
+  'Home'
+]
+
+for (const categorie of categories) {
+  let li = document.createElement('li')
+  li.textContent = categorie
+  ulFilter.appendChild(li)
+}
 
 // Los campos vendedor seller y precio price son obligatorios en cualquiera de los proyectos:
 const products = [
