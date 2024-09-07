@@ -5,10 +5,16 @@ headerUlLeft.classList.add('header-list-left')
 headerUlRight.classList.add('header-list-right')
 
 const headerElements = ['Home', 'Search', 'Language', 'Mi Account', 'Char']
+
 const headerDivLeft = document.createElement('div')
 headerDivLeft.classList.add('header-div-left')
+
 const headerDivRight = document.createElement('div')
 headerDivRight.classList.add('header-div-right')
+
+const backgroundDiv = document.createElement('div')
+backgroundDiv.classList.add('background')
+header.appendChild(backgroundDiv)
 
 const searchContainer = document.createElement('div')
 searchContainer.classList.add('search-container')

@@ -9,8 +9,8 @@
 
 :root {
   --primary-color: #eba974;
-  --secondary-color: #16090f;
-  --tertiary-color: #88e997;
+  --secondary-color: #23114b;
+  --tertiary-color: #03fd28;
   --forth-color: #000;
   --fifth-color: #fff;
   --font-size: 16px;
@@ -58,12 +58,11 @@ body {
   left: 0;
   width: 100%;
   height: 20vh;
-  background-image: url('https://assets.delawaretoday.com/2023/07/brett-breeding.jpg');
+  background-image: url('https://img.freepik.com/premium-photo/cartoon-vector-illustration-cyber-monday-sale-with-background-colorful-discount-stickers-shopping-icons-cartoon-vector-illustration_1288601-10018.jpg?w=1380');
   background-size: cover;
   /* Oscurecer un poco la imagen para que destaque el texto*/
   filter: brightness(75%);
   background-position: center;
-
   z-index: -1;
 }
 
@@ -75,49 +74,52 @@ header {
   left: 0;
   padding: 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--fifth-color);
   z-index: 1;
 }
 
-header > div {
+.header-div-left,
+.header-div-right {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
+  flex-grow: 1; /* Allow divs to grow */
+  align-items: center; /* Center elements vertically */
+  padding: 30px;
+}
+
+.header-div-left {
+  justify-content: flex-start;
+}
+
+.header-div-right {
+  justify-content: flex-end;
 }
 
 .header-list-left,
 .header-list-right {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 20px;
-  flex-wrap: wrap;
   list-style: none;
-  margin: 0;
-}
-
-.header-list-left li,
-.header-list-right li {
-  color: var(--fifth-color);
   font-size: var(--font-size-medium);
   font-weight: bolder;
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
+  margin: 0;
+  padding: 0;
   cursor: pointer;
+  text-decoration: none;
   text-shadow: 2px 2px 4px var(--forth-color);
+}
+
+.header-list-left li {
+  justify-content: flex-start;
+  padding: 40px; /* Alinea los items de la izquierda a la izquierda */
+}
+
+.header-list-right li {
+  justify-content: flex-end; /* Alinea los items de la derecha a la derecha */
+  padding: 20px;
 }
 
 .header-list-left li:hover,
@@ -130,6 +132,7 @@ header > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 20px;
 }
 
 .search-form {
@@ -139,16 +142,14 @@ header > div {
 
 .search-input {
   padding: 10px 15px;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 25px 0 0 25px;
+  border: 1px solid var(--primary-color);
   outline: none;
 }
 
 .search-button {
   padding: 10px;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
   border: none;
-  border-radius: 0 25px 25px 0;
   cursor: pointer;
   display: flex;
   align-items: center;
