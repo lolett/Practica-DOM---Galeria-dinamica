@@ -63,18 +63,22 @@ header.appendChild(headerDivRight)
 document.body.appendChild(header)
 
 const main = document.createElement('main')
-
-const sectionFilter = document.createElement('section')
+main.classList.add('main-container')
+const sectionCategories = document.createElement('section')
+sectionCategories.classList.add('section-categories')
+main.appendChild(sectionCategories)
 const sectionProducts = document.createElement('section')
+sectionProducts.classList.add('section-products')
+main.appendChild(sectionProducts)
+document.body.appendChild(main)
 
-const ulFilter = document.createElement('ul')
-const ulProducts = document.createElement('ul')
+//sección categorías
+const ulCategories = document.createElement('ul')
+ulCategories.classList.add('ul-categories')
 
-const titleFilter = document.createElement('h2')
-titleFilter.textContent = 'Product Categories'
-
-const titleProdcuts = document.createElement('h1')
-titleProdcuts.textContent = 'New Arrivals'
+const titleCategories = document.createElement('h2')
+titleCategories.classList.add('h2-categories')
+titleCategories.textContent = 'Product Categories'
 
 const categories = [
   'Computers',
@@ -91,15 +95,29 @@ const categories = [
 
 for (const categorie of categories) {
   let li = document.createElement('li')
-  li.textContent = categorie
-  ulFilter.appendChild(li)
+  let a = document.createElement('a')
+  a.href = '#'
+  a.textContent = categorie
+  li.appendChild(a)
+  ulCategories.appendChild(li)
 }
+
+sectionCategories.appendChild(titleCategories)
+sectionCategories.appendChild(ulCategories)
+
+// sección productos
+
+const titleProducts = document.createElement('h1')
+titleProducts.classList.add('h1-products')
+titleProducts.textContent = 'New Arrivals'
+
+sectionProducts.appendChild(titleProducts)
 
 // Los campos vendedor seller y precio price son obligatorios en cualquiera de los proyectos:
 const products = [
   {
     name: 'HP Essentials 255 G8 AMD',
-    price: 289,
+    price: '289 €',
     stars: 4,
     reviews: 250,
     seller: 'PcComponentes',
@@ -109,17 +127,16 @@ const products = [
   // Añade aquí al menos 9 productos más para tener un total de 10 productos
   // puedes cambiar los campos de cada objeto si es necesario para tu diseño...
   {
-    name: 'Alicenaga Sneakers Women Running Shoes',
-    price: 22.6,
+    name: 'Women Running Shoes',
+    price: '22.6 €',
     stars: 4.2,
     reviews: 12778,
     seller: 'Amazon',
-    image:
-      'https://www.amazon.com/Alicegana-Breathable-Athletic-Fashion-Sneakers/dp/B074J798BD/ref=sr_1_14?dib=eyJ2IjoiMSJ9.lQPYLmnGKodg4Tf5frGuPF6w33ow9Ecru4SLyrJTR8PBWsoKsJnfjcwjCrlKWzi4U-ihBAdxTMMWD0axv94bZQaIExKFfcLSOJxBsf6md9rqignq6f0Pi5WcezP2G7Qwf-wNLTEIWWBiyq5TIE05tEi2ScjlxLVNmoFx65tVa3sFAVibBIIMecCnSdGdCOaKf9HqakRDpQWEFJU8A4b5ol1KsQpZzze29lTL-m2idScA8cuY83L6X0TRY2l6II9e2QDv_zfwYHRJRhHXbg3hw-JwAQfRiDkIrS8CfuO7Kmw.H1ozDVyXYowp6twmdlnbkICHy02yu9tPcGnHB6TSYxk&dib_tag=se&keywords=sport+shoes&qid=1725310307&sr=8-14'
+    image: 'https://m.media-amazon.com/images/I/715U5DonrHL._AC_SY575_.jpg'
   },
   {
     name: 'Camiseta Techno',
-    price: 20,
+    price: '20 €',
     stars: 4.6,
     reviews: 26486,
     seller: 'latostadora',
@@ -127,8 +144,8 @@ const products = [
       'https://srv.latostadora.com/image/tech-no-tabla-periodica-de-techno-edm-rave-dj--id:861081d4-2ad5-41db-9e41-2a94c1cb6ff6;s:H_A1;b:f2f2f2;w:520;f:f;i:1356233509438135623201709261.jpg'
   },
   {
-    name: 'Infiltrados 4k UltraHD + Blue-Ray',
-    price: 19.95,
+    name: 'Infiltrados 4k/Blue-Ray',
+    price: '19.95 €',
     stars: 4.5,
     reviews: 152,
     seller: 'El Corte Inglés',
@@ -136,8 +153,8 @@ const products = [
       'https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202406/26/00125980810037____1__1200x1200.jpg?impolicy=Resize&width=1200'
   },
   {
-    name: 'The Office the complete series DVD',
-    price: 32.99,
+    name: 'The Office Complete DVD',
+    price: '32.99 €',
     stars: 4.4,
     reviews: 126,
     seller: 'walmart',
@@ -146,7 +163,7 @@ const products = [
   },
   {
     name: 'Xiaomi Redmi Watch 4',
-    price: 89.99,
+    price: '89.99 €',
     stars: 4.6,
     reviews: 19,
     seller: 'MediaMarkt',
@@ -155,7 +172,7 @@ const products = [
   },
   {
     name: 'Elden Ring DLC- Shadow of the Erdtree',
-    price: 31.52,
+    price: '31.52 €',
     stars: 5,
     reviews: 84,
     seller: 'Instant-Gaming',
@@ -164,28 +181,133 @@ const products = [
   },
   {
     name: 'Demon Slayer Complete manga',
-    price: 162.88,
+    price: '162.88 €',
     stars: 4.8,
     reviews: 5130,
     seller: 'Amazon',
+    image: 'https://m.media-amazon.com/images/I/810Isi4YasS._SL1500_.jpg'
+  },
+  {
+    name: 'iPhone 15 Pro',
+    price: '1219 €',
+    stars: 4.5,
+    reviews: 515,
+    seller: 'Apple.com',
     image:
       'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-2-202309_GEO_EMEA?wid=5120&hei=2880&fmt=webp&qlt=70&.v=UW1GeTRObi9UaVF4S3FUNERNMWVhZ2FRQXQ2R0JQTk5udUZxTkR3ZVlpS0o0bnJBQlJYRTdzdWVwMVBVb2c4L1B1OWIzMk5Pa05pM0VtRDBtTXRCK3dUMngwVnJycmY0WkN2ZnNvOUpFNFcraHk5OElIb1ltUHJZVjBUY3JCcW9xbVhUa3FGSmI3VWZ2cHdnckVOUmlBPT0=&traceId=1'
   },
   {
-    name: 'iPhone 15 Pro',
-    price: 1219,
-    stars: 4.5,
-    reviews: 515,
-    seller: 'Apple.com',
-    image: 'https://m.media-amazon.com/images/I/810Isi4YasS._SL1500_.jpg'
-  },
-  {
     name: 'PcCom Gaming',
-    price: 1069,
+    price: '1069 €',
     stars: 4.7,
     reviews: 469,
     seller: 'PcComponentes',
     image:
-      'https://www.pccomponentes.com/pccom-ready-intel-core-i5-12400f-32gb-1tb-ssd-rtx-4060-ti'
+      'https://img.pccomponentes.com/articles/1078/10789790/5313-pccom-ready-intel-core-i5-12400f-32gb-1tb-ssd-rtx-4060-ti-cbccc1fe-0fd9-4dd1-b09a-392d799c6acd.jpg'
   }
 ]
+
+for (let i = 0; i < products.length; i++) {
+  const product = products[i]
+  let article = document.createElement('article')
+  article.classList.add('card')
+
+  let img = document.createElement('img')
+  img.src = product.image
+  img.alt = product.name
+  article.appendChild(img)
+
+  let name = document.createElement('h3')
+  name.textContent = product.name
+  article.appendChild(name)
+
+  let price = document.createElement('p')
+  price.textContent = `Price: ${product.price}`
+  article.appendChild(price)
+
+  let stars = document.createElement('p')
+  stars.textContent = `Rating: ${product.stars} ⭐`
+  article.appendChild(stars)
+
+  let reviews = document.createElement('p')
+  reviews.textContent = `${product.reviews} reviews`
+  article.appendChild(reviews)
+
+  let seller = document.createElement('p')
+  seller.textContent = `Seller: ${product.seller}`
+  article.appendChild(seller)
+
+  sectionProducts.appendChild(article)
+}
+
+//footer section
+const footer = document.createElement('footer')
+footer.classList.add('footer')
+
+const footerContainer = document.createElement('div')
+footerContainer.classList.add('footer-container')
+
+const footerSections = {
+  'Why buy': [
+    'How to buy',
+    'Payment methods',
+    'Shipping costs',
+    'Discount coupons'
+  ],
+  'About us': ['Who we are', 'Our stores', 'Terms of purchase', 'Privacy'],
+  Contact: ['Contact & Help', 'Returns & Warranties', 'Cookies policy']
+}
+
+for (let sectionTitle in footerSections) {
+  const section = footerSections[i]
+  section.classList.add('footer-section')
+
+  const sectionHeading = document.createElement('h4')
+  sectionHeading.textContent = sectionTitle
+  section.appendChild(sectionHeading)
+
+  const ul = document.createElement('ul')
+
+  footerSections[sectionTitle].forEach((item) => {
+    const li = document.createElement('li')
+    const a = document.createElement('a')
+    a.href = '#'
+    a.textContent = item
+    li.appendChild(a)
+    ul.appendChild(li)
+  })
+
+  section.appendChild(ul)
+  footerContainer.appendChild(section)
+}
+
+//sección redes sociales
+const socialIcons = [
+  {
+    name: 'Blog',
+    icon: 'https://img.icons8.com/ios-filled/50/000000/blogger.png'
+  },
+  {
+    name: 'Instagram',
+    icon: 'https://img.icons8.com/ios-filled/50/000000/instagram-new.png'
+  },
+  {
+    name: 'Twitter',
+    icon: 'https://img.icons8.com/ios-filled/50/000000/twitter.png'
+  },
+  {
+    name: 'Facebook',
+    icon: 'https://img.icons8.com/ios-filled/50/000000/facebook-new.png'
+  }
+]
+
+const socialUl = document.createElement('ul')
+
+socialIcons.forEach((social) => {
+  const li = document.createElement('li')
+  const a = document.createElement('a')
+  a.href = '#'
+  a.textContent = `${social.icon} ${social.name}`
+  li.appendChild(a)
+  socialUl.appendChild(li)
+})

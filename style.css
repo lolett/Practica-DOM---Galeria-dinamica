@@ -176,7 +176,7 @@ main {
   width: 100%;
 }
 
-.aside {
+.section-categories {
   grid-column: 1 / 2;
   padding: 10px;
   margin: 0;
@@ -186,12 +186,12 @@ main {
   width: 180px;
   left: 0;
   bottom: 10svh;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
   height: 100%;
   border-right: 1px solid #ddd;
 }
 
-.aside h2 {
+.h2-categories {
   margin-top: 10px;
   margin-bottom: 12px;
   font-size: var(--font-size-large);
@@ -200,7 +200,7 @@ main {
   text-shadow: 2px 2px 4px var(--forth-color);
 }
 
-.aside ul {
+.ul-categories {
   list-style: none;
   text-align: center;
   display: grid;
@@ -212,25 +212,25 @@ main {
   margin-bottom: 5px;
 }
 
-.aside > ul > li {
+.ul-categories li {
   margin-bottom: 5px;
-  padding: 1px;
+  padding: 8px;
 }
 
-.aside ul li a {
+.ul-categories li a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--forth-color);
   font-weight: bold;
 }
 
-.aside ul li a:hover {
-  color: #2980b9;
+.ul-categories li a:hover {
+  color: #5e29b9;
 }
 
-.productos {
+.section-products {
   grid-column: 2 / 5;
-  height: 100%;
-  background-color: var(--primary-color);
+  height: 70svh;
+  background-color: var(--secondary-color);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -239,15 +239,14 @@ main {
   padding: 20px;
 }
 
-.productos > h1 {
-  /*grid-column: 2 / 4;*/
+.h1-products {
   padding: 0;
   margin: 0;
   margin-top: 10px;
   width: 100%;
   text-align: center;
   font-size: 24px;
-  color: #fff;
+  color: var(--primary-color);
 }
 
 .products-grid::-webkit-scrollbar {
@@ -259,7 +258,7 @@ main {
   border-radius: 10px;
 }
 
-.grid-container {
+.card {
   display: grid;
   align-items: center;
   justify-content: center;
