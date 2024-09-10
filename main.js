@@ -45,7 +45,10 @@ searchContainer.appendChild(searchForm)
 for (let i = 0; i < headerElements.length; i++) {
   const element = headerElements[i]
   let li = document.createElement('li')
-  li.textContent = element
+  let a = document.createElement('a')
+  a.href = '#'
+  a.textContent = element
+  li.appendChild(a)
   if (element === 'Home') {
     headerUlLeft.appendChild(li)
   } else if (element === 'Search') {
@@ -171,7 +174,7 @@ const products = [
       'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_136069590?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402'
   },
   {
-    name: 'Elden Ring DLC- Shadow of the Erdtree',
+    name: 'Elden Ring - Shadow of the Erdtree',
     price: '31.52 €',
     stars: 5,
     reviews: 84,
@@ -209,6 +212,7 @@ const products = [
 
 for (let i = 0; i < products.length; i++) {
   const product = products[i]
+  let a = document.createElement('a')
   let article = document.createElement('article')
   article.classList.add('card')
 
@@ -259,7 +263,7 @@ const footerSections = {
 }
 
 for (let sectionTitle in footerSections) {
-  const section = footerSections[i]
+  const section = document.createElement('div')
   section.classList.add('footer-section')
 
   const sectionHeading = document.createElement('h4')
@@ -282,6 +286,13 @@ for (let sectionTitle in footerSections) {
 }
 
 //sección redes sociales
+const socialSection = document.createElement('div')
+socialSection.classList.add(footer - section)
+
+const socialHeading = document.createElement('h4')
+socialHeading.textContent = 'Follow Us'
+socialSection.appendChild(socialHeading)
+
 const socialIcons = [
   {
     name: 'Blog',
@@ -307,7 +318,18 @@ socialIcons.forEach((social) => {
   const li = document.createElement('li')
   const a = document.createElement('a')
   a.href = '#'
-  a.textContent = `${social.icon} ${social.name}`
+
+  const img = document.createElement('img')
+  img.src = social.icon
+  img.alt = social.name
+  img.style.width = '20px'
+  a.appendChild(img)
+  a.appendChild(document.createTextNode(social.name))
   li.appendChild(a)
   socialUl.appendChild(li)
 })
+
+socialSection.appendChild(socialUl)
+footerContainer.appendChild(socialSection)
+footer.appendChild(footerContainer)
+document.body.appendChild(footer)
