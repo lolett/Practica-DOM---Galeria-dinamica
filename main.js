@@ -251,6 +251,9 @@ footer.classList.add('footer')
 const footerContainer = document.createElement('div')
 footerContainer.classList.add('footer-container')
 
+const footerContactSection = document.createElement('div')
+footerContactSection.classList.add('footer-contact')
+
 const footerSections = {
   'Why buy': [
     'How to buy',
@@ -282,16 +285,21 @@ for (let sectionTitle in footerSections) {
   })
 
   section.appendChild(ul)
-  footerContainer.appendChild(section)
+  footerContactSection.appendChild(section)
 }
+
+footerContainer.appendChild(footerContactSection)
+footer.appendChild(footerContainer)
+document.body.appendChild(footer)
 
 //sección redes sociales
 const socialSection = document.createElement('div')
-socialSection.classList.add(footer - section)
+socialSection.classList.add('footer-section', 'social-media')
 
 const socialHeading = document.createElement('h4')
 socialHeading.textContent = 'Follow Us'
 socialSection.appendChild(socialHeading)
+document.body.appendChild(socialSection)
 
 const socialIcons = [
   {
@@ -322,7 +330,7 @@ socialIcons.forEach((social) => {
   const img = document.createElement('img')
   img.src = social.icon
   img.alt = social.name
-  img.style.width = '20px'
+  img.style.width = '18px'
   a.appendChild(img)
   a.appendChild(document.createTextNode(social.name))
   li.appendChild(a)
