@@ -4,7 +4,7 @@ const headerUlRight = document.createElement('ul')
 headerUlLeft.classList.add('header-list-left')
 headerUlRight.classList.add('header-list-right')
 
-const headerElements = ['Home', 'Search', 'Language', 'Mi Account', 'Char']
+const headerElements = ['Home', 'Search', 'Language', 'Mi Account', 'Cart']
 
 const headerDivLeft = document.createElement('div')
 headerDivLeft.classList.add('header-div-left')
@@ -251,19 +251,27 @@ footer.classList.add('footer')
 const footerContainer = document.createElement('div')
 footerContainer.classList.add('footer-container')
 
-const footerContactSection = document.createElement('div')
-footerContactSection.classList.add('footer-contact')
-
 const footerSections = {
-  'Why buy': [
-    'How to buy',
-    'Payment methods',
-    'Shipping costs',
-    'Discount coupons'
-  ],
-  'About us': ['Who we are', 'Our stores', 'Terms of purchase', 'Privacy'],
-  Contact: ['Contact & Help', 'Returns & Warranties', 'Cookies policy']
+  'Why buy': ['How to buy', 'Payment methods', 'Discount coupons'],
+  'About us': ['Who we are', 'Our stores', 'Privacy'],
+  Contact: ['Contact & Help', 'Returns & Warranties', 'Cookies policy'],
+  'Follow Us': []
 }
+
+const socialIcons = [
+  {
+    name: 'Instagram',
+    icon: 'https://img.icons8.com/ios-filled/50/000000/instagram-new.png'
+  },
+  {
+    name: 'Twitter',
+    icon: 'https://img.icons8.com/ios-filled/50/000000/twitter.png'
+  },
+  {
+    name: 'Facebook',
+    icon: 'https://img.icons8.com/ios-filled/50/000000/facebook-new.png'
+  }
+]
 
 for (let sectionTitle in footerSections) {
   const section = document.createElement('div')
@@ -275,24 +283,39 @@ for (let sectionTitle in footerSections) {
 
   const ul = document.createElement('ul')
 
-  footerSections[sectionTitle].forEach((item) => {
-    const li = document.createElement('li')
-    const a = document.createElement('a')
-    a.href = '#'
-    a.textContent = item
-    li.appendChild(a)
-    ul.appendChild(li)
-  })
+  if (sectionTitle === 'Follow Us') {
+    socialIcons.forEach((social) => {
+      const li = document.createElement('li')
+      const a = document.createElement('a')
+      a.href = '#'
+      const img = document.createElement('img')
+      img.src = social.icon
+      img.alt = social.name
+      img.style.width = '18px'
+      a.appendChild(img)
+      a.appendChild(document.createTextNode(`${social.name}`))
+      li.appendChild(a)
+      ul.appendChild(li)
+    })
+  } else {
+    footerSections[sectionTitle].forEach((item) => {
+      const li = document.createElement('li')
+      const a = document.createElement('a')
+      a.href = '#'
+      a.textContent = item
+      li.appendChild(a)
+      ul.appendChild(li)
+    })
+  }
 
   section.appendChild(ul)
-  footerContactSection.appendChild(section)
+  footerContainer.appendChild(section)
 }
 
-footerContainer.appendChild(footerContactSection)
 footer.appendChild(footerContainer)
 document.body.appendChild(footer)
 
-//sección redes sociales
+/*sección redes sociales
 const socialSection = document.createElement('div')
 socialSection.classList.add('footer-section', 'social-media')
 
@@ -340,4 +363,4 @@ socialIcons.forEach((social) => {
 socialSection.appendChild(socialUl)
 footerContainer.appendChild(socialSection)
 footer.appendChild(footerContainer)
-document.body.appendChild(footer)
+document.body.appendChild(footer)*/
