@@ -254,7 +254,7 @@ footerContainer.classList.add('footer-container')
 const footerSections = {
   'Why buy': ['How to buy', 'Payment methods', 'Discount coupons'],
   'About us': ['Who we are', 'Our stores', 'Privacy'],
-  Contact: ['Contact & Help', 'Returns & Warranties', 'Cookies policy'],
+  Contact: ['Contact & Help', 'Returns/Warranties', 'Cookies policy'],
   'Follow Us': []
 }
 

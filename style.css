@@ -61,7 +61,6 @@ body {
   height: 10rem;
   background-image: url('https://img.freepik.com/premium-photo/cartoon-vector-illustration-cyber-monday-sale-with-background-colorful-discount-stickers-shopping-icons-cartoon-vector-illustration_1288601-10018.jpg?w=1380');
   background-size: cover;
-  /* Oscurecer un poco la imagen para que destaque el texto*/
   filter: brightness(75%);
   background-position: center;
   z-index: -1;
@@ -73,7 +72,7 @@ header {
   height: 10rem;
   top: 0;
   left: 0;
-  padding: 10px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,15 +85,13 @@ header {
 .header-div-left,
 .header-div-right {
   display: flex;
-  flex-grow: 1; /* Allow divs to grow */
-  align-items: center; /* Center elements vertically */
-  padding: 30px;
+  flex-grow: 1;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
 }
 
-.header-div-left {
-  justify-content: space-around;
-}
-
+.header-div-left,
 .header-div-right {
   justify-content: space-around;
 }
@@ -113,15 +110,11 @@ header {
   text-shadow: 2px 2px 4px var(--forth-color);
 }
 
-.header-list-left li {
-  justify-content: flex-start;
-  padding: 40px;
-  text-decoration: none; /* Alinea los items de la izquierda a la izquierda */
-}
-
+.header-list-left li,
 .header-list-right li {
-  justify-content: space-around; /* Alinea los items de la derecha a la derecha */
-  padding: 30px;
+  justify-content: flex-start;
+  padding: 0px;
+  text-decoration: none; /* Alinea los items de la izquierda a la izquierda */
 }
 
 .header-list-left li a,
@@ -178,8 +171,7 @@ main {
 }
 
 .main-container {
-  display: grid;
-  grid-template-columns: 15rem 1fr 1fr 1fr;
+  display: flex;
   margin-top: 10rem;
   height: 100%;
   width: 100%;
@@ -190,20 +182,22 @@ main {
   grid-column: 1 / 2;
   padding: 10px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
   position: fixed;
   top: 10rem;
   width: 15rem;
   left: 0;
-  bottom: 3rem;
   background-color: var(--primary-color);
   height: 100%;
   border-right: 1px solid #ddd;
 }
 
 .h2-categories {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin: 1rem;
+  margin-bottom: 3rem;
   font-size: var(--font-size-large);
   color: #fff;
   text-align: center;
@@ -238,13 +232,13 @@ main {
 }
 
 .section-products {
-  grid-column: 2 / 5;
   height: 100%;
   background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-left: 15rem;
   gap: 2rem;
   padding: 2rem;
 }
@@ -301,42 +295,39 @@ main {
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 1rem;
   background-color: var(--sixth-color);
 }
 
 .footer-container {
   display: flex;
   justify-content: center;
-  width: 100%;
-  max-width: 1200px;
+  width: 70%;
   margin: 0;
   margin-left: 15rem;
 }
 
 .footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
-  margin-right: 1.5rem;
-}
-
-.footer-section:last-child {
-  margin-right: 0;
+  margin: 0.5rem;
 }
 
 .footer-section h4 {
-  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-size-medium);
   font-weight: bold;
-  margin-bottom: 0.5rem;
 }
 
 .footer-section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.footer-section ul li {
-  margin-bottom: 0.2rem;
 }
 
 .footer-section ul li a {
@@ -344,7 +335,6 @@ main {
   color: var(--fifth-color);
   transition: color 0.3s ease;
 }
-
 .footer-section ul li a:hover {
   color: var(--highlight-color);
   text-decoration: underline;
@@ -376,13 +366,13 @@ main {
 
 @media (max-width: 915px) {
   .card {
-    width: 12rem;
-    height: 18rem;
+    width: 14rem;
+    height: 20rem;
   }
 
   .card img {
-    width: 8rem;
-    height: 6rem;
+    width: 10rem;
+    height: 8rem;
     border-bottom: 1px solid #ddd;
     object-fit: contain;
     border-radius: 1rem;
@@ -392,34 +382,18 @@ main {
     font-size: var(--font-size-medium);
     margin: 1rem;
   }
-}
 
-@media (max-width: 758px) {
-  .search-container {
-    flex-grow: 0;
-    margin-left: 20px;
+  .footer-section h4 {
+    font-size: var(--font-size-small);
+    font-weight: bold;
   }
 
-  .search-input {
-    padding: 15px 8px;
-  }
-
-  .search-button {
-    padding: 5px;
-  }
-
-  .search-button img {
-    width: 10px;
-    height: 10px;
+  .footer-section {
+    font-size: var(--font-size-small);
   }
 }
 
-@media (max-width: 768px) {
-  .main-container {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-  }
-
+@media (max-width: 785px) {
   .section-categories {
     grid-column: 1 / 1;
     padding: 10px;
@@ -427,7 +401,7 @@ main {
     box-sizing: border-box;
     position: fixed;
     top: 10rem;
-    width: 10rem;
+    width: 12rem;
     left: 0;
     bottom: 3rem;
     background-color: var(--primary-color);
@@ -437,7 +411,7 @@ main {
 
   .h2-categories {
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
     font-size: var(--font-size-large);
     color: #fff;
     text-align: center;
@@ -482,52 +456,77 @@ main {
     color: var(--forth-color);
   }
 
-  .card {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    justify-items: center;
-    align-content: center;
-    width: 18rem;
-    height: 24rem;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    gap: 1rem;
-    box-shadow: 0px 6px 23px -15px rgba(0, 0, 0, 0.75);
-    transition: transform 0.5s;
-    border-radius: 1rem;
+  .social-media ul a {
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (max-width: 758px) {
+  .search-container {
+    flex-grow: 0;
+    margin-left: 10px;
   }
 
-  .card:hover {
-    transform: scale(1.05);
+  .search-input {
+    padding: 13px 5px;
   }
 
-  .card img {
-    width: 13rem;
-    height: 12rem;
-    border-bottom: 1px solid #ddd;
-    object-fit: cover;
-    border-radius: 1rem;
+  .search-button {
+    padding: 9px;
   }
 
-  .card h2 {
-    font-size: var(--font-size-medium);
-    margin: 1rem;
+  .search-button img {
+    width: 25px;
+    height: 25px;
   }
 
   .footer-container {
-    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 1.5rem;
+    padding: 0;
+  }
+
+  .footer-container {
+    margin-left: 12rem;
   }
 
   .footer-section {
-    margin-bottom: 1rem;
-    margin-right: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 0.5rem;
   }
 
-  .social-media ul {
-    justify-content: center;
+  .footer-section h4 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.2rem;
+    align-items: center;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: var(--fifth-color);
+    font-size: var(--font-size-tiny);
+    transition: color 0.3s ease;
+    align-items: center;
   }
 }
 
@@ -592,10 +591,9 @@ main {
 
 .social-media a:hover {
   color: var(--highlight-color);
-}
-*/
+}*/
 
-@media (min-width: 375px) and (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 785px) {
   header > ul > li {
     font-size: var(--font-size-small);
   }
@@ -680,8 +678,8 @@ main {
   }
 
   .social-media img {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
   }
 }
 
