@@ -4,7 +4,7 @@ const headerUlRight = document.createElement('ul')
 headerUlLeft.classList.add('header-list-left')
 headerUlRight.classList.add('header-list-right')
 
-const headerElements = ['Home', 'Search', 'Language', 'Mi Account', 'Cart']
+const headerElements = ['Home', 'Search', 'Language', 'Account', 'Cart']
 
 const headerDivLeft = document.createElement('div')
 headerDivLeft.classList.add('header-div-left')
@@ -120,7 +120,7 @@ sectionProducts.appendChild(titleProducts)
 const products = [
   {
     name: 'HP Essentials 255 G8 AMD',
-    price: '289 €',
+    price: '289€',
     stars: 4,
     reviews: 250,
     seller: 'PcComponentes',
@@ -131,7 +131,7 @@ const products = [
   // puedes cambiar los campos de cada objeto si es necesario para tu diseño...
   {
     name: 'Women Running Shoes',
-    price: '22.6 €',
+    price: '22.6€',
     stars: 4.2,
     reviews: 12778,
     seller: 'Amazon',
@@ -139,7 +139,7 @@ const products = [
   },
   {
     name: 'Camiseta Techno',
-    price: '20 €',
+    price: '20€',
     stars: 4.6,
     reviews: 26486,
     seller: 'latostadora',
@@ -148,7 +148,7 @@ const products = [
   },
   {
     name: 'Infiltrados 4k/Blue-Ray',
-    price: '19.95 €',
+    price: '19.95€',
     stars: 4.5,
     reviews: 152,
     seller: 'El Corte Inglés',
@@ -157,7 +157,7 @@ const products = [
   },
   {
     name: 'The Office Complete DVD',
-    price: '32.99 €',
+    price: '32.99€',
     stars: 4.4,
     reviews: 126,
     seller: 'walmart',
@@ -166,16 +166,27 @@ const products = [
   },
   {
     name: 'Xiaomi Redmi Watch 4',
-    price: '89.99 €',
+    price: '89.99€',
     stars: 4.6,
     reviews: 19,
     seller: 'MediaMarkt',
     image:
       'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_136069590?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402'
   },
+
+  {
+    name: 'PANTALÓN CARGO RAVEN STONE',
+    price: '69.90€',
+    stars: 4.5,
+    reviews: 157,
+    seller: 'Bluebanana',
+    image:
+      'https://www.bluebananabrand.com/cdn/shop/files/STONE_RAVEN_CARGO_PANT_AW24MG035RAVGY08_10_540x.jpg?v=1726137885'
+  },
+
   {
     name: 'Elden Ring - Shadow of the Erdtree',
-    price: '31.52 €',
+    price: '31.52€',
     stars: 5,
     reviews: 84,
     seller: 'Instant-Gaming',
@@ -184,7 +195,7 @@ const products = [
   },
   {
     name: 'Demon Slayer Complete manga',
-    price: '162.88 €',
+    price: '162.88€',
     stars: 4.8,
     reviews: 5130,
     seller: 'Amazon',
@@ -192,7 +203,7 @@ const products = [
   },
   {
     name: 'iPhone 15 Pro',
-    price: '1219 €',
+    price: '1219€',
     stars: 4.5,
     reviews: 515,
     seller: 'Apple.com',
@@ -201,12 +212,22 @@ const products = [
   },
   {
     name: 'PcCom Gaming',
-    price: '1069 €',
+    price: '1069€',
     stars: 4.7,
     reviews: 469,
     seller: 'PcComponentes',
     image:
       'https://img.pccomponentes.com/articles/1078/10789790/5313-pccom-ready-intel-core-i5-12400f-32gb-1tb-ssd-rtx-4060-ti-cbccc1fe-0fd9-4dd1-b09a-392d799c6acd.jpg'
+  },
+
+  {
+    name: 'After Shave Balm',
+    price: '24.90 €',
+    stars: 4.4,
+    reviews: 62,
+    seller: 'Rituals',
+    image:
+      'https://rituals.scene7.com/is/image/rituals/1116295-aftershavebalm-100ml:Square?fmt=webp-alpha&hei=1163&resMode=sharp2&wid=1163'
   }
 ]
 
