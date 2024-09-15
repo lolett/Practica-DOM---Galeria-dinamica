@@ -498,7 +498,7 @@ main {
   }
 
   .ul-categories li {
-    margin-bottom: 2rem;
+    margin-bottom: 1.3rem;
     padding: 0.3rem;
   }
 
@@ -531,4 +531,8 @@ main {
   .header-list-right {
     font-size: var(--font-size-tiny);
   }
+}
+
+/* movil responsive */
+@media (min-width: 375) and (max-width: 480px) {
 }
