@@ -92,7 +92,6 @@ const categories = [
   'Manga and Comics',
   'Phones and Accessories',
   'Smartwatches',
-  'Toys',
   'Home'
 ]
 
@@ -125,7 +124,8 @@ const products = [
     reviews: 250,
     seller: 'PcComponentes',
     image:
-      'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg'
+      'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg',
+    url: 'https://www.pccomponentes.com/hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156?srsltid=AfmBOoprDwP1KxSsuyesrKLFXae7dH1AyWIx4MB7elrEhQVlsMHK3wCv'
   },
   // Añade aquí al menos 9 productos más para tener un total de 10 productos
   // puedes cambiar los campos de cada objeto si es necesario para tu diseño...
@@ -135,7 +135,8 @@ const products = [
     stars: 4.2,
     reviews: 12778,
     seller: 'Amazon',
-    image: 'https://m.media-amazon.com/images/I/715U5DonrHL._AC_SY575_.jpg'
+    image: 'https://m.media-amazon.com/images/I/715U5DonrHL._AC_SY575_.jpg',
+    url: 'https://www.amazon.com/Alicegana-Breathable-Athletic-Fashion-Sneakers/dp/B074J798BD/ref=sr_1_3_sspa?dib=eyJ2IjoiMSJ9.QABbJ7hEphHoSrCS44QcTqNuR3q-adRgefKlhPfbZb6gNVWIfm7QM829TUIW4Gm6tTDAcLyhcnhavZDBFHH6kjZ_agIPtCeBuD3CBr-ChIvVjnX12m1i1V8m7a6LBQ5iExbwjP8tbVZBomwayou6S1I2aoGSCZf4uROaEUiIwqInBg_2ho-WiPiD89Ou3K_7faaM0a8DtpLUTKlwpMDoga9EkqnAKjMZPEv6m19jZDkzbq5g5PtugHVInuiq1EPfae5sFBG8xMtK9wFwVtlIELRMzfiS1ZEgqHtegKexkww.iafwTPlNPxtKFIELTMGJpOKN1v6RPP8OHxH3EWFsjf0&dib_tag=se&keywords=Women%27s+white+Running+Shoes&qid=1726521324&s=apparel&sr=1-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1'
   },
   {
     name: 'Camiseta Techno',
@@ -144,7 +145,8 @@ const products = [
     reviews: 26486,
     seller: 'latostadora',
     image:
-      'https://srv.latostadora.com/image/tech-no-tabla-periodica-de-techno-edm-rave-dj--id:861081d4-2ad5-41db-9e41-2a94c1cb6ff6;s:H_A1;b:f2f2f2;w:520;f:f;i:1356233509438135623201709261.jpg'
+      'https://srv.latostadora.com/image/tech-no-tabla-periodica-de-techno-edm-rave-dj--id:861081d4-2ad5-41db-9e41-2a94c1cb6ff6;s:H_A1;b:f2f2f2;w:520;f:f;i:1356233509438135623201709261.jpg',
+    url: 'https://www.latostadora.com/web/tech-no-tabla-periodica-de-techno-edm-rave-dj/3545853'
   },
   {
     name: 'Infiltrados 4k/Blue-Ray',
@@ -153,7 +155,8 @@ const products = [
     reviews: 152,
     seller: 'El Corte Inglés',
     image:
-      'https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202406/26/00125980810037____1__1200x1200.jpg?impolicy=Resize&width=1200'
+      'https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202406/26/00125980810037____1__1200x1200.jpg?impolicy=Resize&width=1200',
+    url: 'https://www.elcorteingles.es/cine/A52193352-infiltrados-4k-ultra-hd--blu-ray/'
   },
   {
     name: 'The Office Complete DVD',
@@ -162,7 +165,8 @@ const products = [
     reviews: 126,
     seller: 'walmart',
     image:
-      'https://i5.walmartimages.com/seo/The-Office-The-Complete-Series-DVD-Universal-Studios-Comedy_cae958f0-ca90-4d16-8c7f-5622eaf82870.54f4a9b9d5c04664a4e342aff44eb256.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF'
+      'https://i5.walmartimages.com/seo/The-Office-The-Complete-Series-DVD-Universal-Studios-Comedy_cae958f0-ca90-4d16-8c7f-5622eaf82870.54f4a9b9d5c04664a4e342aff44eb256.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF',
+    url: 'https://www.walmart.ca/en/ip/The-Office-The-Complete-Series-DVD/6000198266344'
   },
   {
     name: 'Xiaomi Redmi Watch 4',
@@ -171,7 +175,8 @@ const products = [
     reviews: 19,
     seller: 'MediaMarkt',
     image:
-      'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_136069590?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402'
+      'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_136069590?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402',
+    url: 'https://www.mediamarkt.es/es/product/_smartwatch-xiaomi-redmi-watch-4-bluetooth-hasta-20-dias-multideporte-negro-obsidiana-1567281.html?srsltid=AfmBOopPM7Ei3Kg1TsKIWlKIXjwvZFctwK9gwGpszqC5paWY2HLuleWa'
   },
 
   {
@@ -181,7 +186,8 @@ const products = [
     reviews: 157,
     seller: 'Bluebanana',
     image:
-      'https://www.bluebananabrand.com/cdn/shop/files/STONE_RAVEN_CARGO_PANT_AW24MG035RAVGY08_10_540x.jpg?v=1726137885'
+      'https://www.bluebananabrand.com/cdn/shop/files/STONE_RAVEN_CARGO_PANT_AW24MG035RAVGY08_10_540x.jpg?v=1726137885',
+    url: 'https://www.bluebananabrand.com/products/stone-raven-cargo-pants-aw24?gender=man'
   },
 
   {
@@ -191,7 +197,8 @@ const products = [
     reviews: 84,
     seller: 'Instant-Gaming',
     image:
-      'https://gaming-cdn.com/images/products/13652/616x353/elden-ring-shadow-of-the-erdtree-pc-juego-steam-europe-cover.jpg?v=1718975158'
+      'https://gaming-cdn.com/images/products/13652/616x353/elden-ring-shadow-of-the-erdtree-pc-juego-steam-europe-cover.jpg?v=1718975158',
+    url: 'https://www.instant-gaming.com/en/13652-buy-elden-ring-shadow-of-the-erdtree-pc-game-steam-europe/?srsltid=AfmBOoq9zZ_VqAPORpH7ZqHh_g8l65MKBwDD3is-T5pGhAg70Elv96St'
   },
   {
     name: 'Demon Slayer Complete manga',
@@ -199,16 +206,18 @@ const products = [
     stars: 4.8,
     reviews: 5130,
     seller: 'Amazon',
-    image: 'https://m.media-amazon.com/images/I/810Isi4YasS._SL1500_.jpg'
+    image: 'https://m.media-amazon.com/images/I/810Isi4YasS._SL1500_.jpg',
+    url: 'https://www.amazon.es/Demon-Slayer-Complete-Box-Set/dp/1974725952'
   },
   {
-    name: 'iPhone 15 Pro',
+    name: 'iPhone 16 Pro',
     price: '1219€',
-    stars: 4.5,
-    reviews: 515,
-    seller: 'Apple.com',
+    stars: 4.7,
+    reviews: 100,
+    seller: 'Apple',
     image:
-      'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-2-202309_GEO_EMEA?wid=5120&hei=2880&fmt=webp&qlt=70&.v=UW1GeTRObi9UaVF4S3FUNERNMWVhZ2FRQXQ2R0JQTk5udUZxTkR3ZVlpS0o0bnJBQlJYRTdzdWVwMVBVb2c4L1B1OWIzMk5Pa05pM0VtRDBtTXRCK3dUMngwVnJycmY0WkN2ZnNvOUpFNFcraHk5OElIb1ltUHJZVjBUY3JCcW9xbVhUa3FGSmI3VWZ2cHdnckVOUmlBPT0=&traceId=1'
+      'https://www.apple.com/es/iphone-16-pro/images/overview/product-viewer/iphone-pro/all_colors__fdpduog7urm2_xlarge.jpg',
+    url: 'https://www.apple.com/es/iphone-16-pro/'
   },
   {
     name: 'PcCom Gaming',
@@ -217,7 +226,8 @@ const products = [
     reviews: 469,
     seller: 'PcComponentes',
     image:
-      'https://img.pccomponentes.com/articles/1078/10789790/5313-pccom-ready-intel-core-i5-12400f-32gb-1tb-ssd-rtx-4060-ti-cbccc1fe-0fd9-4dd1-b09a-392d799c6acd.jpg'
+      'https://img.pccomponentes.com/articles/1078/10789790/5313-pccom-ready-intel-core-i5-12400f-32gb-1tb-ssd-rtx-4060-ti-cbccc1fe-0fd9-4dd1-b09a-392d799c6acd.jpg',
+    url: 'https://www.pccomponentes.com/pccom-ready-intel-core-i5-12400f-32gb-1tb-ssd-rtx-4060-ti'
   },
 
   {
@@ -227,13 +237,19 @@ const products = [
     reviews: 62,
     seller: 'Rituals',
     image:
-      'https://rituals.scene7.com/is/image/rituals/1116295-aftershavebalm-100ml:Square?fmt=webp-alpha&hei=1163&resMode=sharp2&wid=1163'
+      'https://rituals.scene7.com/is/image/rituals/1116295-aftershavebalm-100ml:Square?fmt=webp-alpha&hei=1163&resMode=sharp2&wid=1163',
+    url: 'https://www.rituals.com/es-es/homme-after-shave-soothing-balm-1116295.html#start=1'
   }
 ]
 
 for (let i = 0; i < products.length; i++) {
   const product = products[i]
+
   let a = document.createElement('a')
+  a.href = product.url
+  a.target = '_blank'
+  a.classList.add('card-link')
+
   let article = document.createElement('article')
   article.classList.add('card')
 
@@ -262,7 +278,8 @@ for (let i = 0; i < products.length; i++) {
   seller.textContent = `Seller: ${product.seller}`
   article.appendChild(seller)
 
-  sectionProducts.appendChild(article)
+  a.appendChild(article)
+  sectionProducts.appendChild(a)
 }
 
 //footer section

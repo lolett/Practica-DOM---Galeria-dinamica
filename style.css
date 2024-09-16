@@ -286,6 +286,14 @@ main {
   margin: 1rem;
 }
 
+.card-link {
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
 .footer {
   width: 100%;
   left: 0;
@@ -335,6 +343,7 @@ main {
   text-decoration: none;
   color: var(--fifth-color);
   transition: color 0.3s ease;
+  padding: 0.1rem;
 }
 .footer-section ul li a:hover {
   color: var(--highlight-color);
@@ -497,7 +506,7 @@ main {
   }
 
   .ul-categories li {
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.2rem;
     padding: 0.3rem;
   }
 
@@ -640,9 +649,13 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     margin-left: 0;
-    margin-top: 10rem;
+    margin-top: 9rem;
     gap: 2rem;
     padding: 2rem;
+  }
+
+  .card h2 {
+    margin: 1rem;
   }
 
   .footer {
